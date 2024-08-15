@@ -1,0 +1,44 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+
+body {
+    padding-left: 70px;
+}
+
+@mixin buttonOption($color) {
+    cursor: pointer;
+    transition: 270ms;
+    padding: 2px 10px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid $color;
+    border-radius: 5px;
+    transform: scale(1.1);
+    color: $color;
+    &:hover {
+        background-color: $color;
+        color: white;
+    }
+}
+
+.good {
+    @include buttonOption(rgb(3, 213, 3));
+}
+
+.neutral {
+    @include buttonOption(rgb(3, 104, 213));
+}
+
+.bad {
+    @include buttonOption(rgb(213, 3, 3));
+}
